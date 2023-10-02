@@ -7,7 +7,7 @@ import AboutImage from "../images/bgimage.png";
 
 const AboutContainer = styled.div`
   width: 100%;
-  /* height: 100vh; */
+  height: 100%;
   background-color: rgb(4, 25, 34);
   display: flex;
   justify-content: center;
@@ -17,6 +17,18 @@ const AboutContainer = styled.div`
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
   /* border: 1px solid white; */
+  position: relative;
+  padding: 150px 30px;
+
+  @media (max-width: 960px) {
+    padding: 66px 16px;
+  }
+  @media (max-width: 640) {
+    padding: 32px 16px;
+  }
+  z-index: 1;
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
 const AboutInnerContainer = styled.div`
@@ -25,7 +37,8 @@ const AboutInnerContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 90%;
+  height: 100%;
+  margin: 20px;
   /* padding: 0 30px; */
 
   /* border: 1px solid blue; */
@@ -186,8 +199,8 @@ const ButtonContainer = styled.div`
 const CVButton = styled.button`
   font-size: 20px;
   font-weight: 700;
-  margin: 15px;
-  padding: 15px 20px;
+  margin: 20px;
+  padding: 15px 30px;
   color: white;
   display: flex;
   justify-content: center;
@@ -206,13 +219,13 @@ const CVButton = styled.button`
   }
 
   @media screen and (max-width: 950px) {
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 20px;
   }
 
   @media screen and (max-width: 600px) {
-    padding: 10px 15px;
-    font-size: 18px;
+    padding: 10px 25px;
+    font-size: 15px;
   }
 `;
 

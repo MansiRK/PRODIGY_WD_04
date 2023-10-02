@@ -169,6 +169,8 @@ const MobileMenuItem = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   padding: 5px 25px;
+  border-bottom: 0.2px solid gray;
+
   &:hover {
     color: aqua;
   }

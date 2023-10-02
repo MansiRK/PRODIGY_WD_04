@@ -88,15 +88,18 @@ export const skills = [
     skills: [
       {
         name: "VSCode",
-        image: "",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
       {
         name: "PyCharm",
-        image: "",
+        image:
+          "https://seeklogo.com/images/P/pycharm-logo-51B1427388-seeklogo.com.png",
       },
       {
         name: "Postman",
-        image: "",
+        image:
+          "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
       },
       {
         name: "Git",
@@ -105,15 +108,13 @@ export const skills = [
       },
       {
         name: "GitHub",
-        image: "",
+        image:
+          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
       },
       {
         name: "Figma",
-        image: "",
-      },
-      {
-        name: "Render",
-        image: "",
+        image:
+          "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
       },
     ],
   },
@@ -175,7 +176,7 @@ export const projects = [
     id: 0,
     image: "",
     name: "ShopRise",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
     tech: ["React Js", "Bootstrap", "Node Js", "Express Js", "MySql"],
@@ -186,7 +187,7 @@ export const projects = [
     id: 1,
     image: "",
     name: "TicTacToe",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
     tech: ["HTML", "CSS", "JS", "Bootstrap"],
@@ -197,7 +198,7 @@ export const projects = [
     id: 2,
     image: "",
     name: "User Data",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
     tech: ["React Js", "Bootstrap", "Firebase"],
@@ -208,7 +209,7 @@ export const projects = [
     id: 3,
     image: "",
     name: "TimeTracker",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
     tech: ["HTML", "CSS", "JS", "Bootstrap"],
@@ -219,7 +220,7 @@ export const projects = [
     id: 4,
     image: "",
     name: "TravelBuddy",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
     tech: ["HTML", "CSS", "JS", "Bootstrap"],
@@ -230,7 +231,7 @@ export const projects = [
     id: 5,
     image: "",
     name: "Social Media App Backend",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
     tech: ["Node Js", "Express Js", "MongoDB"],
@@ -241,7 +242,7 @@ export const projects = [
     id: 6,
     image: "",
     name: "TodoList",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
     tech: ["EJS", "Node Js", "Express Js"],
@@ -255,7 +256,7 @@ export const accomplishment = [
     id: 0,
     image: "",
     title: "Best Research Paper",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     rank: "3rd Prize",
     given: "NCRENB",
     description:
@@ -266,7 +267,7 @@ export const accomplishment = [
     id: 1,
     image: "",
     title: "Paper Publication",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     rank: "Published",
     given: "IJRPI",
     description:
@@ -277,7 +278,7 @@ export const accomplishment = [
     id: 2,
     image: "",
     title: "Project Competition",
-    time: "August 2016 - July 2017",
+    date: "August 2016 - July 2017",
     rank: "Participation",
     description:
       "I completed my SSC from Infant Jesus High School from Maharashtra Board with Destinction.",
