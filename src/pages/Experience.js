@@ -1,24 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import EducationCard from "../components/EducationCard";
+import ExperienceCard from "../components/ExperienceCard";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import { education, experiences } from "../utils/Data";
+import { experiences } from "../utils/Data";
 
 const Container = styled.div`
-  /* width: 100%; */
-  /* height: 100vh; */
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 30px 20px;
   position: relative;
   z-index: 1;
+  -webkit-clip-path: polygon(66% 5%, 100% 0, 100% 92%, 32% 100%, 0 91%, 0 0);
+  clip-path: polygon(66% 5%, 100% 0, 100% 92%, 32% 100%, 0 91%, 0 0);
   @media (max-width: 960px) {
     /* padding: 66px 16px; */
   }
@@ -38,6 +42,8 @@ const Wrapper = styled.div`
   padding: 40px 0px 0px 0px;
   border: 1px solid white;
   gap: 12px;
+  /* -webkit-clip-path: polygon(30% 0, 100% 9%, 100% 92%, 51% 100%, 0 91%, 0 11%);
+  clip-path: polygon(30% 0, 100% 9%, 100% 92%, 51% 100%, 0 91%, 0 11%); */
   @media screen and (max-width: 650px) {
     /* padding-right: 40px; */
     flex-direction: column;
@@ -80,23 +86,23 @@ const TimelineContainer = styled.div`
   }
 `;
 
-const Education = () => {
+const Experience = () => {
   return (
-    <div id="education">
+    <div id="experiences">
       <Container>
         <Wrapper>
-          <EducationTitle>Education</EducationTitle>
+          <EducationTitle>Experience</EducationTitle>
           <EducationDescription>Description</EducationDescription>
           <TimelineContainer>
             <Timeline>
-              {education.map((education, index) => (
+              {experiences.map((experience, index) => (
                 <TimelineItem>
                   <TimelineContent sx={{ py: "12px", px: 3 }}>
-                    <EducationCard education={education} />
+                    <ExperienceCard experience={experience} />
                   </TimelineContent>
                   <TimelineSeparator>
                     <TimelineDot variant="outlined" color="secondary" />
-                    {index !== education.length - 1 && (
+                    {index !== experience.length - 1 && (
                       <TimelineConnector style={{ background: "gray" }} />
                     )}
                   </TimelineSeparator>
@@ -110,4 +116,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default Experience;

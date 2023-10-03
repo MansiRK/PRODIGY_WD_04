@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { projects } from "../utils/Data";
 import Image from "../images/home.jpeg";
 import ProjectDetail from "./ProjectDetail";
-const ProjectCard = styled.div`
+
+const ProjectCardContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -92,23 +93,25 @@ const Date = styled.div`
   }
 `;
 
-const Project = (setOpenModel) => {
+const ProjectCard = ({ project, setOpenModal }) => {
   return (
-    <ProjectCard onClick={() => setOpenModel({ state: true })}>
-      <ProjectImage src={projects.image} />
+    <ProjectCardContainer
+      onClick={() => setOpenModal({ state: true, project: project })}
+    >
+      {/* <ProjectImage src={project.image} />
       <TagsContainer>
-        {projects.tech?.map((tech, index) => (
+        {project.tech?.map((tech, index) => (
           <ProjectTag>{tech}</ProjectTag>
         ))}
       </TagsContainer>
       <ProjectDetails>
-        <ProjectTitle>{projects.name}</ProjectTitle>
-        <Date>{projects.date}</Date>
-        <ProjectDescription>{projects.description}</ProjectDescription>
+        <ProjectTitle>{project.name}</ProjectTitle>
+        <Date>{project.date}</Date>
+        <ProjectDescription>{project.description}</ProjectDescription>
       </ProjectDetails>
-      <ProjectDetail />
-    </ProjectCard>
+      <ProjectDetail /> */}
+    </ProjectCardContainer>
   );
 };
 
-export default Project;
+export default ProjectCard;

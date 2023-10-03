@@ -10,12 +10,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-
+  border: 1px solid white;
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
   @media (max-width: 640) {
-    padding: 32px 16px;
+    padding: 32px 5px;
   }
   z-index: 1;
 `;
@@ -28,6 +28,10 @@ const Wrapper = styled.div`
   align-items: center;
   width: 80%;
   height: 90%;
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.div`
@@ -58,21 +62,29 @@ const SkillContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+
+  @media screen and (max-width: 650px) {
+    max-width: 500px;
+    width: 100%;
+  }
 `;
 
 const Skill = styled.div`
   width: 100%;
   max-width: 700px;
-  margin: 10px 20px;
+  margin: 10px 5px;
   background-color: black;
   border-radius: 20px;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border: 0.5px solid aqua;
-  padding: 15px 20px;
+  padding: 15px 25px;
+  /* width: 300px; */
 
   @media screen and (max-width: 650px) {
-    max-width: 500px;
-    padding: 10px 15px;
+    /* max-width: 500px; */
+    width: 300px;
+
+    padding: 10px 5px;
   }
 `;
 
@@ -82,13 +94,22 @@ const SkillTitle = styled.h2`
   color: aqua;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (max-width: 950px) {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 950px) {
+    font-size: 18px;
+  }
 `;
 
 const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   margin: 10px;
 `;
 
@@ -109,7 +130,10 @@ const SkillItem = styled.div`
   @media screen and (max-width: 650px) {
     font-size: 15px;
     font-weight: 450;
-    padding: 15px;
+    padding: 2px 10px;
+    margin: 10px;
+
+    height: 35px;
   }
 `;
 
@@ -117,6 +141,11 @@ const SkillImage = styled.img`
   width: 80%;
   height: 80%;
   padding-right: 5px;
+
+  @media screen and (max-width: 650px) {
+    width: 50%;
+    height: 50%;
+  }
 `;
 
 const Skills = () => {

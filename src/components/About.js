@@ -15,7 +15,7 @@ const AboutContainer = styled.div`
   /* position: relative; */
   padding: 10px 50px;
   z-index: 1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%); */
   /* clip-path: circle(40%); */
   /* border: 1px solid white; */
   position: relative;
@@ -28,8 +28,10 @@ const AboutContainer = styled.div`
     padding: 32px 16px;
   }
   z-index: 1;
-
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+  /* 
+  clip-path: circle(40%); */
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 92%, 63% 100%, 0 92%, 0 0);
+  clip-path: polygon(50% 0, 100% 0, 100% 92%, 63% 100%, 0 92%, 0 0);
 `;
 
 const AboutInnerContainer = styled.div`
@@ -100,7 +102,7 @@ const AboutTextContainer = styled.div`
   /* border: 1px solid white; */
   /* order: 1; */
   /* border: 1px solid red; */
-  padding: 20px;
+  padding-left: 30px;
 
   @media screen and (max-width: 950px) {
     order: 2;

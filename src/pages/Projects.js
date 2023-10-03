@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Project from "../components/Project";
+import ProjectCard from "../components/ProjectCard";
 
 const Container = styled.div`
-  /* background-color: black; */
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +11,8 @@ const Container = styled.div`
   position: relative;
   padding: 80px 30px;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 98%, 0 100%); */
-
+  -webkit-clip-path: polygon(21% 0, 100% 9%, 100% 100%, 53% 92%, 0 100%, 0 11%);
+  clip-path: polygon(21% 0, 100% 9%, 100% 100%, 53% 92%, 0 100%, 0 11%);
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
@@ -83,7 +84,7 @@ const Projects = () => {
           <Title>Projects</Title>
           <Description>Description</Description>
           <CardContainer>
-            <Project />
+            <ProjectCard />
           </CardContainer>
         </Wrapper>
       </Container>

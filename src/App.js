@@ -8,9 +8,10 @@ import { useState } from "react";
 import Education from "./pages/Education";
 import { BrowserRouter as Router } from "react-router-dom";
 import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
 
 const Body = styled.div`
-  background-color: ${({ theme }) => theme.bg};
+  background-color: #1c1c27;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -28,25 +29,27 @@ const Wrapper = styled.div`
       rgba(126, 6, 212, 0.15) 100%
     );
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%); */
+  /* 
+  -webkit-clip-path: polygon(21% 0, 100% 9%, 100% 100%, 57% 100%, 0 100%, 0 8%);
+  clip-path: polygon(21% 0, 100% 9%, 100% 100%, 57% 100%, 0 100%, 0 8%); */
 `;
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
   return (
-    <ThemeProvider theme={darkTheme}>
-      <Router>
-        <NavBar />
-        <Body>
-          <Home />
-          <Wrapper>
-            <Skills />
-            <Projects />
-            <Education />
-          </Wrapper>
-        </Body>
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <NavBar />
+      <Body>
+        <Home />
+        <Wrapper>
+          <Skills />
+          <Projects />
+          <Education />
+          <Experience />
+        </Wrapper>
+      </Body>
+    </Router>
   );
 };
 
