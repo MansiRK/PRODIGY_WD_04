@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   width: 80%;
 
   @media screen and (max-width: 650px) {
-    width: 70%;
+    width: 100%;
   }
 `;
 
@@ -70,7 +70,7 @@ const NavLink = styled.a`
     font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    padding: 5px 5px;
+    padding: 0;
 
     &:hover {
       color: aqua;
