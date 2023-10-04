@@ -181,6 +181,11 @@ const Contact = () => {
       );
   };
 
+  console.log("this is mansi");
+  console.log(process.env.REACT_APP_SERVICE_ID);
+  console.log(process.env.REACT_APP_TEMPLATE_ID);
+  console.log(process.env.REACT_APP_USER_ID);
+
   return (
     <div id="contact">
       <Container>
