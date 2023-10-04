@@ -18,6 +18,12 @@ const Container = styled.div`
   padding: 50px 20px;
   position: relative;
   z-index: 1;
+  @media (max-width: 960px) {
+    padding: 66px 16px;
+  }
+  @media (max-width: 640) {
+    padding: 32px 10px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -31,7 +37,9 @@ const Wrapper = styled.div`
   padding: 40px 0px 0px 0px;
   gap: 12px;
   @media screen and (max-width: 650px) {
+    padding-right: 40px;
     flex-direction: column;
+    padding: 40px 0px 0px 0px;
   }
 `;
 
