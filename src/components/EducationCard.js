@@ -67,10 +67,11 @@ const Body = styled.div`
 `;
 
 const Name = styled.div`
-  font-size: 20px;
-  font-weight: 700;
-  color: gray;
+  font-size: 25px;
+  font-weight: 800;
+  color: rgb(204, 2, 204);
   border: 1px solid white;
+  padding: 5px 10px;
   /* padding: 10px; */
   text-align: center;
 
@@ -85,24 +86,27 @@ const School = styled.div`
   font-weight: 500;
   text-align: center;
 
-  color: gray;
+  color: aqua;
   @media screen and (max-width: 650px) {
     font-size: 15px;
   }
 `;
 
 const Date = styled.div`
-  font-size: 18px;
-  color: gray;
+  font-size: 15px;
+  border: 1px solid white;
+  font-weight: 400;
+  color: rgb(12, 190, 190);
+  padding: 5px;
   @media screen and (max-width: 650px) {
-    font-size: 13px;
+    font-size: 12px;
   }
 `;
 
 const Grade = styled.div`
   font-size: 15px;
   font-weight: 500;
-  color: gray;
+  color: white;
 
   @media only screen and (max-width: 768px) {
     font-size: 13px;
@@ -111,17 +115,16 @@ const Grade = styled.div`
 
 const Description = styled.div`
   width: 100%;
-  font-size: 15px;
-  font-weight: 500;
-  color: gray;
+  font-size: 20px;
+  /* font-weight: 500; */
+  color: rgb(195, 190, 195);
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid white;
   text-align: justify;
 
   @media only screen and (max-width: 650px) {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 15px;
     text-align: center;
 
     /* width: 50%; */

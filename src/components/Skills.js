@@ -89,15 +89,15 @@ const Skill = styled.div`
 `;
 
 const SkillTitle = styled.h2`
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 800;
   color: aqua;
   text-align: center;
   text-transform: uppercase;
 
   @media screen and (max-width: 950px) {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   @media screen and (max-width: 950px) {

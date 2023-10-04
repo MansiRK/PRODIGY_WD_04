@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectCard from "../components/ProjectCard";
+import { projects } from "../utils/Data";
 
 const Container = styled.div`
   background-color: black;
@@ -10,9 +11,9 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   padding: 80px 30px;
-  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 98%, 0 100%); */
-  -webkit-clip-path: polygon(21% 0, 100% 9%, 100% 100%, 53% 92%, 0 100%, 0 11%);
-  clip-path: polygon(21% 0, 100% 9%, 100% 100%, 53% 92%, 0 100%, 0 11%);
+  -webkit-clip-path: polygon(53% 0, 100% 4%, 100% 97%, 37% 100%, 0 98%, 0 4%);
+  clip-path: polygon(53% 0, 100% 4%, 100% 97%, 37% 100%, 0 98%, 0 4%);
+
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
@@ -76,7 +77,7 @@ const CardContainer = styled.div`
   /* gap: 28px; */
   flex-wrap: wrap;
 `;
-const Projects = () => {
+const Projects = ({ openModal, setOpenModal }) => {
   return (
     <div id="projects">
       <Container>
@@ -84,7 +85,13 @@ const Projects = () => {
           <Title>Projects</Title>
           <Description>Description</Description>
           <CardContainer>
-            <ProjectCard />
+            {projects.map((newproject) => (
+              <ProjectCard
+                project={newproject}
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+              />
+            ))}
           </CardContainer>
         </Wrapper>
       </Container>

@@ -15,7 +15,7 @@ const ExperienceCardContainer = styled.div`
   transition: all 0.3s ease-in-out;
   border: 1px solid blue;
   border-radius: 20px;
-  padding: 20px 20px;
+  padding: 20px;
 
   @media screen and (max-width: 950px) {
     width: 400px;
@@ -69,10 +69,13 @@ const Body = styled.div`
 const Role = styled.div`
   font-size: 20px;
   font-weight: 700;
-  color: gray;
+  color: rgb(204, 2, 204);
+  font-size: 25px;
+  font-weight: 800;
   border: 1px solid white;
   /* padding: 10px; */
   text-align: center;
+  padding: 5px 10px;
 
   @media screen and (max-width: 650px) {
     font-size: 18px;
@@ -85,43 +88,35 @@ const Company = styled.div`
   font-weight: 500;
   text-align: center;
 
-  color: gray;
+  color: aqua;
+
   @media screen and (max-width: 650px) {
     font-size: 15px;
   }
 `;
 
 const Date = styled.div`
-  font-size: 18px;
-  color: gray;
+  border: 1px solid white;
+  font-weight: 400;
+  color: rgb(12, 190, 190);
+  padding: 5px;
   @media screen and (max-width: 650px) {
-    font-size: 13px;
-  }
-`;
-
-const Grade = styled.div`
-  font-size: 15px;
-  font-weight: 500;
-  color: gray;
-
-  @media only screen and (max-width: 768px) {
-    font-size: 13px;
+    font-size: 12px;
   }
 `;
 
 const Description = styled.div`
   width: 100%;
-  font-size: 15px;
-  font-weight: 500;
-  color: gray;
+  font-size: 20px;
+  /* font-weight: 500; */
+  color: rgb(195, 190, 195);
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid white;
   text-align: justify;
 
   @media only screen and (max-width: 650px) {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 15px;
     text-align: center;
 
     /* width: 50%; */
@@ -156,7 +151,7 @@ const SkillItem = styled.div`
 const Skill = styled.div`
   font-size: 15px;
   font-weight: 400;
-  color: rgb(204, 2, 204);
+  color: aqua;
   border: 0.2px solid gray;
   border-radius: 50px;
   /* color: gray; */
@@ -178,7 +173,6 @@ const ExperienceCard = ({ experience }) => {
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>
           <Date>{experience.time}</Date>
-          <Grade>{experience.class}</Grade>
         </Body>
       </ExperienceDetail>
       <Description>

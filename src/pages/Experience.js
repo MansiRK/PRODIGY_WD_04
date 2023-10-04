@@ -8,6 +8,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { experiences } from "../utils/Data";
+import { BusinessCenter } from "@mui/icons-material";
 
 const Container = styled.div`
   width: 100%;
@@ -24,10 +25,10 @@ const Container = styled.div`
   -webkit-clip-path: polygon(66% 5%, 100% 0, 100% 92%, 32% 100%, 0 91%, 0 0);
   clip-path: polygon(66% 5%, 100% 0, 100% 92%, 32% 100%, 0 91%, 0 0);
   @media (max-width: 960px) {
-    /* padding: 66px 16px; */
+    padding: 66px 16px;
   }
   @media (max-width: 640) {
-    /* padding: 32px 16px; */
+    padding: 32px 15px;
   }
 `;
 
@@ -82,13 +83,13 @@ const TimelineContainer = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 660px) {
-    align-items: end;
+    align-items: start;
   }
 `;
 
 const Experience = () => {
   return (
-    <div id="experiences">
+    <div id="experience">
       <Container>
         <Wrapper>
           <EducationTitle>Experience</EducationTitle>
@@ -97,15 +98,17 @@ const Experience = () => {
             <Timeline>
               {experiences.map((experience, index) => (
                 <TimelineItem>
-                  <TimelineContent sx={{ py: "12px", px: 3 }}>
-                    <ExperienceCard experience={experience} />
-                  </TimelineContent>
                   <TimelineSeparator>
-                    <TimelineDot variant="outlined" color="secondary" />
+                    <TimelineDot color="primary" variant="outlined">
+                      <BusinessCenter />
+                    </TimelineDot>
                     {index !== experience.length - 1 && (
                       <TimelineConnector style={{ background: "gray" }} />
                     )}
                   </TimelineSeparator>
+                  <TimelineContent sx={{ py: "12px", px: 3 }}>
+                    <ExperienceCard experience={experience} />
+                  </TimelineContent>
                 </TimelineItem>
               ))}
             </Timeline>

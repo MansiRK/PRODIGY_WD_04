@@ -8,6 +8,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { education, experiences } from "../utils/Data";
+import { MenuBook } from "@mui/icons-material";
 
 const Container = styled.div`
   /* width: 100%; */
@@ -95,7 +96,9 @@ const Education = () => {
                     <EducationCard education={education} />
                   </TimelineContent>
                   <TimelineSeparator>
-                    <TimelineDot variant="outlined" color="secondary" />
+                    <TimelineDot>
+                      <MenuBook />
+                    </TimelineDot>
                     {index !== education.length - 1 && (
                       <TimelineConnector style={{ background: "gray" }} />
                     )}

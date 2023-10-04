@@ -2,53 +2,60 @@ import React from "react";
 import styled from "styled-components";
 import { Modal } from "@mui/material";
 import { AiOutlineClose as CloseIcon } from "react-icons/ai";
-import { projects } from "../utils/Data";
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  background-color: gray;
+  position: absolute;
+  background-color: #000000a7;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  left: 0;
   overflow: hidden;
   transition: all 0.5s ease;
 `;
 
 const Wrapper = styled.div`
+  max-width: 850px;
   width: 100%;
-  height: 100%;
+  height: min-content;
+  /* height: 100%; */
   border-radius: 20px;
   margin: 50px 20px;
+  padding: 20px;
+  position: relative;
   height: min-content;
-  background-color: aqua;
+  background-color: black;
   color: pink;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 `;
 
 const CloseButton = styled.div`
-  position: "absolute";
-  top: "10px";
-  right: "20px";
-  cursor: "pointer";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  /* margin: "10px"; */
+  cursor: pointer;
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
-  height: 100%;
+  object-fit: cover;
   background-color: white;
   border-radius: 20px;
-  /* box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
 `;
 
 const TagsContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 10px 15px;
 `;
@@ -61,14 +68,15 @@ const ProjectTag = styled.span`
   border-radius: 50px;
   background-color: gray;
   padding: 5px 20px;
+  margin: 10px 15px;
 `;
 
 const ProjectTitle = styled.h2`
   font-size: 28px;
   text-transform: uppercase;
   font-weight: 700;
-  color: aqua;
-  text-align: start;
+  /* color: aqua; */
+  text-align: center;
   border: 1px solid white;
 `;
 
@@ -84,14 +92,48 @@ const Date = styled.div`
   margin-left: 2px;
   font-weight: 400;
   color: gray;
+  text-align: center;
 
   @media only screen and (max-width: 650px) {
     font-size: 12px;
   }
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0px;
+  /* gap: 12px; */
+`;
+
+const Button = styled.a`
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  padding: 12px 16px;
+  margin: 10px 20px;
+  border-radius: 8px;
+  background-color: aqua;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: pink;
+  }
+  @media only screen and (max-width: 650px) {
+    font-size: 12px;
+  }
+`;
+
 const ProjectDetail = ({ openModal, setOpenModal }) => {
-  const project = openModal?.projects;
+  const project = openModal?.project;
+  if (!project) {
+    return console.log("error"); // or handle the case when project is undefined
+  }
+
   return (
     <Modal
       open={true}
@@ -104,14 +146,20 @@ const ProjectDetail = ({ openModal, setOpenModal }) => {
           >
             <CloseIcon />
           </CloseButton>
-          <ProjectImage />
-          Image
-          <ProjectTitle>Title</ProjectTitle>
-          <Date>Date</Date>
+          <ProjectImage src={project?.image} />
+
+          <ProjectTitle>{project?.name || "No Name"}</ProjectTitle>
+          <Date>{project.date}</Date>
           <TagsContainer>
-            <ProjectTag>Tag</ProjectTag>
+            {project?.tech.map((tag) => (
+              <ProjectTag>{tag}</ProjectTag>
+            ))}
           </TagsContainer>
-          <ProjectDescription>Description</ProjectDescription>
+          <ProjectDescription>{project?.description}</ProjectDescription>
+          <ButtonContainer>
+            <Button>Go To Code</Button>
+            <Button>Go To Website</Button>
+          </ButtonContainer>
         </Wrapper>
       </Container>
     </Modal>

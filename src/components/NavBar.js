@@ -162,7 +162,7 @@ const MobileMenu = styled.div`
   z-index: ${({ isOpen }) => (isOpen ? "100" : "-100")};
 `;
 
-const MobileMenuItem = styled(Link)`
+const MobileMenuItem = styled.a`
   color: white;
   font-size: 22px;
   font-weight: 700;
@@ -201,10 +201,11 @@ const MobileGitHubButton = styled.button`
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Nav>
       <NavContainer>
-        <NavBrand>
+        <NavBrand to="/">
           P<LargerO>O</LargerO>rtfolio
         </NavBrand>
         <MobileMenuIcon>
@@ -215,22 +216,22 @@ const NavBar = () => {
           />
         </MobileMenuIcon>
         <NavItems>
-          <NavLink>
+          <NavLink href="#about">
             <MdOutlineAccountCircle />
           </NavLink>
-          <NavLink>
+          <NavLink href="#skills">
             <FaCode />
           </NavLink>
-          <NavLink>
+          <NavLink href="#projects">
             <FaTasks />
           </NavLink>
-          <NavLink>
+          <NavLink href="#education">
             <BiBookAlt />
           </NavLink>
-          <NavLink>
+          <NavLink href="#experience">
             <LiaSuitcaseSolid />
           </NavLink>
-          <NavLink>
+          <NavLink href="#contact">
             <FiMail />
           </NavLink>
         </NavItems>
