@@ -188,15 +188,25 @@ const Contact = () => {
         <Description>Connect by simply sending me a message.</Description>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactLabel>Name</ContactLabel>
-          <ContactInput type="text" placeholder="John Doe" name="user_name" />
+          <ContactInput
+            type="text"
+            placeholder="John Doe"
+            name="user_name"
+            required
+          />
           <ContactLabel>Email</ContactLabel>
           <ContactInput
             type="email"
             placeholder="jonhdoe@example.com"
             name="user_email"
+            required
           />
           <ContactLabel>Message</ContactLabel>
-          <TextMessage placeholder="Your Message.." name="user_message" />
+          <TextMessage
+            placeholder="Your Message.."
+            name="user_message"
+            required
+          />
           <ButtonContainer>
             <Button>Submit</Button>
           </ButtonContainer>
