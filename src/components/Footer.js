@@ -5,9 +5,11 @@ import { LiaSuitcaseSolid } from "react-icons/lia";
 import { BiBookAlt } from "react-icons/bi";
 import { FaCode, FaTasks } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import { AiOutlineTrophy } from "react-icons/ai";
 
 import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
+import { Bio } from "../utils/Data";
 
 const Container = styled.div`
   width: 100%;
@@ -124,18 +126,21 @@ const Footer = () => {
           <NavLink href="#experience">
             <LiaSuitcaseSolid />
           </NavLink>
+          <NavLink href="#accomplishment">
+            <AiOutlineTrophy />
+          </NavLink>
           <NavLink href="#contact">
             <FiMail />
           </NavLink>
         </NavItems>
         <IconsContainer>
-          <Icons>
+          <Icons href={Bio.github}>
             <BsGithub />
           </Icons>
-          <Icons>
+          <Icons href={Bio.linkedIn}>
             <AiFillLinkedin />
           </Icons>
-          <Icons>
+          <Icons href={Bio.instagram}>
             <AiOutlineInstagram />
           </Icons>
         </IconsContainer>

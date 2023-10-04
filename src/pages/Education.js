@@ -1,18 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import EducationCard from "../components/EducationCard";
+import EducationCard from "../components/Cards/EducationCard";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import { education, experiences } from "../utils/Data";
+import { education } from "../utils/Data";
 import { MenuBook } from "@mui/icons-material";
 
 const Container = styled.div`
-  /* width: 100%; */
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,12 +18,6 @@ const Container = styled.div`
   padding: 50px 20px;
   position: relative;
   z-index: 1;
-  @media (max-width: 960px) {
-    /* padding: 66px 16px; */
-  }
-  @media (max-width: 640) {
-    /* padding: 32px 16px; */
-  }
 `;
 
 const Wrapper = styled.div`
@@ -37,10 +29,8 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1350px;
   padding: 40px 0px 0px 0px;
-  border: 1px solid white;
   gap: 12px;
   @media screen and (max-width: 650px) {
-    /* padding-right: 40px; */
     flex-direction: column;
   }
 `;
@@ -55,10 +45,9 @@ const EducationTitle = styled.h2`
     font-size: 30px;
   }
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 650px) {
     font-size: 25px;
   }
-  /* border: 1px solid white; */
 `;
 
 const EducationDescription = styled.div`
@@ -87,7 +76,9 @@ const Education = () => {
       <Container>
         <Wrapper>
           <EducationTitle>Education</EducationTitle>
-          <EducationDescription>Description</EducationDescription>
+          <EducationDescription>
+            These section provides an idea about my educational background.
+          </EducationDescription>
           <TimelineContainer>
             <Timeline>
               {education.map((education, index) => (
@@ -96,8 +87,8 @@ const Education = () => {
                     <EducationCard education={education} />
                   </TimelineContent>
                   <TimelineSeparator>
-                    <TimelineDot>
-                      <MenuBook />
+                    <TimelineDot color="secondary" variant="outlined">
+                      <MenuBook style={{ color: "white", fontSize: "30px" }} />
                     </TimelineDot>
                     {index !== education.length - 1 && (
                       <TimelineConnector style={{ background: "gray" }} />

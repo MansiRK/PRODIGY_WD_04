@@ -1,7 +1,7 @@
 import Home from "./pages/Home";
 import styled from "styled-components";
 import NavBar from "./components/NavBar";
-import Skills from "./components/Skills";
+import Skills from "./pages/Skills";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./utils/Theme";
 import { useState } from "react";
@@ -12,6 +12,7 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import ProjectDetail from "./components/ProjectDetail";
+import Accomplishment from "./pages/Accomplishment";
 
 const Body = styled.div`
   background-color: #1c1c27;
@@ -54,6 +55,7 @@ const App = () => {
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Education />
           <Experience />
+          <Accomplishment />
           <Contact />
         </Wrapper>
         <Footer />

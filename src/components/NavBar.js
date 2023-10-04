@@ -7,6 +7,8 @@ import { BiBookAlt } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { FaCode, FaTasks, FaBars } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import { AiOutlineTrophy } from "react-icons/ai";
+import { Bio } from "../utils/Data";
 
 const Nav = styled.div`
   background-color: rgb(3, 20, 42);
@@ -50,7 +52,7 @@ const NavBrand = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: aqua;
+    color: rgb(204, 2, 204);
   }
 
   @media (max-width: 600px) {
@@ -100,7 +102,7 @@ const ButtonContainer = styled.div`
   align-items: center;
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   font-size: 20px;
   font-weight: 700;
   margin: 15px;
@@ -111,6 +113,7 @@ const Button = styled.button`
   background-color: transparent;
   border-radius: 50px;
   border: 2px solid aqua;
+  text-decoration: none;
   &:hover {
     background-color: aqua;
     color: white;
@@ -176,7 +179,7 @@ const MobileMenuItem = styled.a`
   }
 `;
 
-const MobileGitHubButton = styled.button`
+const MobileGitHubButton = styled.a`
   display: none;
   @media screen and (max-width: 950px) {
     font-size: 18px;
@@ -188,6 +191,7 @@ const MobileGitHubButton = styled.button`
     align-items: center;
     background-color: transparent;
     border-radius: 50px;
+    text-decoration: none;
     border: 2px solid aqua;
     &:hover {
       background-color: aqua;
@@ -231,12 +235,15 @@ const NavBar = () => {
           <NavLink href="#experience">
             <LiaSuitcaseSolid />
           </NavLink>
+          <NavLink href="#accomplishment">
+            <AiOutlineTrophy />
+          </NavLink>
           <NavLink href="#contact">
             <FiMail />
           </NavLink>
         </NavItems>
         <ButtonContainer>
-          <Button>
+          <Button href={Bio.github}>
             <BsGithub />
             GitHub
           </Button>
@@ -285,6 +292,14 @@ const NavBar = () => {
             <LiaSuitcaseSolid />
           </MobileMenuItem>
           <MobileMenuItem
+            href="#accomplishment"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            <AiOutlineTrophy />
+          </MobileMenuItem>
+          <MobileMenuItem
             href="#contact"
             onClick={() => {
               setIsOpen(!isOpen);
@@ -292,7 +307,7 @@ const NavBar = () => {
           >
             <FiMail />
           </MobileMenuItem>
-          <MobileGitHubButton>
+          <MobileGitHubButton href={Bio.github}>
             <BsGithub />
             GitHub
           </MobileGitHubButton>

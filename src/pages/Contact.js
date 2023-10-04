@@ -6,14 +6,11 @@ import { Snackbar } from "@mui/material";
 
 const Container = styled.div`
   width: 100%;
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-  border: 1px solid white;
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
@@ -67,7 +64,6 @@ const ContactForm = styled.form`
   border-radius: 20px;
   margin: 30px 20px;
   padding: 30px 100px;
-  /* box-shadow: 2px 2px #888888; */
 
   @media screen and (max-width: 650px) {
     width: 100%;
@@ -126,8 +122,6 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 50px; */
-  /* border: 1px solid yellow; */
 `;
 
 const Button = styled.button`
@@ -191,7 +185,7 @@ const Contact = () => {
     <div id="contact">
       <Container>
         <Title>Contact</Title>
-        <Description>Description</Description>
+        <Description>Connect by simply sending me a message.</Description>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactLabel>Name</ContactLabel>
           <ContactInput type="text" placeholder="John Doe" name="user_name" />

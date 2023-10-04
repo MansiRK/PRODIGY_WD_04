@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { HiDownload } from "react-icons/hi";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../utils/Data";
 import AboutImage from "../images/bgimage.png";
-
+import Description from "@mui/icons-material/DescriptionOutlined";
 const AboutContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -12,12 +11,8 @@ const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
   padding: 10px 50px;
   z-index: 1;
-  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%); */
-  /* clip-path: circle(40%); */
-  /* border: 1px solid white; */
   position: relative;
   padding: 150px 30px;
 
@@ -28,56 +23,38 @@ const AboutContainer = styled.div`
     padding: 32px 16px;
   }
   z-index: 1;
-  /* 
-  clip-path: circle(40%); */
   -webkit-clip-path: polygon(50% 0, 100% 0, 100% 92%, 63% 100%, 0 92%, 0 0);
   clip-path: polygon(50% 0, 100% 0, 100% 92%, 63% 100%, 0 92%, 0 0);
 `;
 
 const AboutInnerContainer = styled.div`
-  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   height: 100%;
   margin: 20px;
-  /* padding: 0 30px; */
-
-  /* border: 1px solid blue; */
 
   @media screen and (max-width: 950px) {
     flex-direction: column;
     justify-content: space-between;
-    /* order: 2; */
   }
 
   @media screen and (max-width: 950px) {
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
-    /* order: 2; */
   }
 `;
 
 const AboutImgContainer = styled.div`
   width: 100%;
   height: 100%;
-  /* height: 100%; */
-  /* width: 90%; */
-  /* padding: 5px 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* top: 50%; */
-  /* left: 50%; */
-  /* top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; */
   overflow: hidden;
   padding: 10px 50px;
-  /* border: 1px solid white; */
 
   @media screen and (max-width: 950px) {
     order: 1;
@@ -98,10 +75,6 @@ const AboutTextContainer = styled.div`
   flex-direction: column;
   align-items: start;
   justify-content: center;
-
-  /* border: 1px solid white; */
-  /* order: 1; */
-  /* border: 1px solid red; */
   padding-left: 30px;
 
   @media screen and (max-width: 950px) {
@@ -114,7 +87,6 @@ const AboutTextContainer = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    /* order: 2; */
     height: 55%;
     flex-direction: column;
     align-items: center;
@@ -195,11 +167,9 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 50px; */
-  /* border: 1px solid yellow; */
 `;
 
-const CVButton = styled.button`
+const CVButton = styled.a`
   font-size: 20px;
   font-weight: 700;
   margin: 20px;
@@ -211,14 +181,21 @@ const CVButton = styled.button`
   background-color: rgb(204, 2, 204);
   border-radius: 50px;
   border: none;
+  text-decoration: none;
+
+  svg {
+    margin-right: 5px;
+    font-size: 25px;
+    color: white !important;
+  }
 
   &:hover {
     background-color: white;
     color: rgb(204, 2, 204);
-  }
-  svg {
-    margin-right: 5px;
-    font-size: 25px;
+
+    svg {
+      color: rgb(204, 2, 204);
+    }
   }
 
   @media screen and (max-width: 950px) {
@@ -236,24 +213,21 @@ const Image = styled.img`
   position: relative;
   width: 60%;
   height: 60%;
-  /* display: flex;
-  justify-content: start;
-  align-items: center; */
   max-width: 100%;
   max-height: 100%;
-  border-radius: 50%; /* Optional: Apply border-radius for a circular overlay */
+  border-radius: 50%;
   border: 2px solid aqua;
   animation: glowing 3s infinite;
 
   @keyframes glowing {
     0% {
-      box-shadow: 0 2px 5px aqua; /* Adjust color and opacity as needed */
+      box-shadow: 0 2px 5px aqua;
     }
     50% {
-      box-shadow: 0 0 20px rgb(204, 2, 204); /* Adjust color and opacity as needed */
+      box-shadow: 0 0 20px rgb(204, 2, 204);
     }
     100% {
-      box-shadow: 0 0 15px rgba(0, 0, 255, 0.7); /* Adjust color and opacity as needed */
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.7);
     }
   }
 
@@ -290,13 +264,12 @@ const About = () => {
             <SubTitle>{Bio.description}</SubTitle>
 
             <ButtonContainer>
-              <CVButton>
-                <HiDownload />
-                Download CV
+              <CVButton href={Bio.resume}>
+                <Description />
+                View CV
               </CVButton>
             </ButtonContainer>
           </AboutTextContainer>
-          {/* <AboutImage></AboutImage> */}
           <AboutImgContainer>
             <Image src={AboutImage} />
           </AboutImgContainer>

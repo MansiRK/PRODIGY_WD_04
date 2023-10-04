@@ -9,38 +9,34 @@ const Container = styled.div`
   position: absolute;
   background-color: #000000a7;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow-y: scroll;
   transition: all 0.5s ease;
 `;
 
 const Wrapper = styled.div`
-  max-width: 850px;
+  max-width: 800px;
   width: 100%;
   height: min-content;
-  /* height: 100%; */
   border-radius: 20px;
-  margin: 50px 20px;
+  margin: 50px 12px;
   padding: 20px;
   position: relative;
-  height: min-content;
   background-color: black;
-  color: pink;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
 `;
 
 const CloseButton = styled.div`
   position: absolute;
   top: 10px;
   right: 20px;
-  /* margin: "10px"; */
   cursor: pointer;
+  color: white;
+  font-size: 25px;
 `;
 
 const ProjectImage = styled.img`
@@ -63,21 +59,33 @@ const TagsContainer = styled.div`
 const ProjectTag = styled.span`
   font-size: 15px;
   font-weight: 500;
-  color: aqua;
-  border: none;
-  border-radius: 50px;
-  background-color: gray;
   padding: 5px 20px;
   margin: 10px 15px;
+  color: rgb(204, 2, 204);
+  border: 0.5px solid gray;
+  border-radius: 50px;
+  background-color: transparent;
+  @media screen and (max-width: 650px) {
+    margin: 5px 10px;
+    padding: 5px;
+  }
 `;
 
 const ProjectTitle = styled.h2`
   font-size: 28px;
   text-transform: uppercase;
   font-weight: 700;
-  /* color: aqua; */
+  color: aqua;
   text-align: center;
-  border: 1px solid white;
+
+  @media screen and (max-width: 950px) {
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 20px;
+  }
 `;
 
 const ProjectDescription = styled.div`
@@ -85,6 +93,10 @@ const ProjectDescription = styled.div`
   color: rgb(195, 190, 195);
   text-align: justify;
   width: 100%;
+  padding: 5px;
+  @media screen and (max-width: 650px) {
+    font-size: 15px;
+  }
 `;
 
 const Date = styled.div`
@@ -104,16 +116,16 @@ const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 12px 0px;
-  /* gap: 12px; */
 `;
 
 const Button = styled.a`
   width: 50%;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
+  text-transform: uppercase;
   color: white;
-  padding: 12px 16px;
+  padding: 10px;
   margin: 10px 20px;
   border-radius: 8px;
   background-color: aqua;
@@ -121,18 +133,18 @@ const Button = styled.a`
   text-decoration: none;
   transition: all 0.5s ease;
   &:hover {
-    background-color: pink;
+    border: 1px solid rgb(204, 2, 204);
+    background-color: transparent;
   }
   @media only screen and (max-width: 650px) {
     font-size: 12px;
+    padding: 8px;
+    margin: 10px 20px;
   }
 `;
 
 const ProjectDetail = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
-  if (!project) {
-    return console.log("error"); // or handle the case when project is undefined
-  }
 
   return (
     <Modal
@@ -148,7 +160,7 @@ const ProjectDetail = ({ openModal, setOpenModal }) => {
           </CloseButton>
           <ProjectImage src={project?.image} />
 
-          <ProjectTitle>{project?.name || "No Name"}</ProjectTitle>
+          <ProjectTitle>{project?.name}</ProjectTitle>
           <Date>{project.date}</Date>
           <TagsContainer>
             {project?.tech.map((tag) => (
@@ -157,8 +169,8 @@ const ProjectDetail = ({ openModal, setOpenModal }) => {
           </TagsContainer>
           <ProjectDescription>{project?.description}</ProjectDescription>
           <ButtonContainer>
-            <Button>Go To Code</Button>
-            <Button>Go To Website</Button>
+            <Button href={project?.github}>Code</Button>
+            <Button href={project?.live}>Website</Button>
           </ButtonContainer>
         </Wrapper>
       </Container>

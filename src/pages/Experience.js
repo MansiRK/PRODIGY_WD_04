@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ExperienceCard from "../components/ExperienceCard";
+import ExperienceCard from "../components/Cards/ExperienceCard";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -14,7 +14,6 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   background-color: black;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +21,7 @@ const Container = styled.div`
   padding: 30px 20px;
   position: relative;
   z-index: 1;
+
   -webkit-clip-path: polygon(66% 5%, 100% 0, 100% 92%, 32% 100%, 0 91%, 0 0);
   clip-path: polygon(66% 5%, 100% 0, 100% 92%, 32% 100%, 0 91%, 0 0);
   @media (max-width: 960px) {
@@ -41,13 +41,11 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1350px;
   padding: 40px 0px 0px 0px;
-  border: 1px solid white;
   gap: 12px;
-  /* -webkit-clip-path: polygon(30% 0, 100% 9%, 100% 92%, 51% 100%, 0 91%, 0 11%);
-  clip-path: polygon(30% 0, 100% 9%, 100% 92%, 51% 100%, 0 91%, 0 11%); */
+
   @media screen and (max-width: 650px) {
-    /* padding-right: 40px; */
     flex-direction: column;
+    padding-left: 20px;
   }
 `;
 
@@ -64,7 +62,6 @@ const EducationTitle = styled.h2`
   @media screen and (max-width: 950px) {
     font-size: 25px;
   }
-  /* border: 1px solid white; */
 `;
 
 const EducationDescription = styled.div`
@@ -76,14 +73,14 @@ const EducationDescription = styled.div`
 
 const TimelineContainer = styled.div`
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   @media (max-width: 660px) {
-    align-items: start;
+    align-items: center;
   }
 `;
 
@@ -93,14 +90,18 @@ const Experience = () => {
       <Container>
         <Wrapper>
           <EducationTitle>Experience</EducationTitle>
-          <EducationDescription>Description</EducationDescription>
+          <EducationDescription>
+            My work experience as a web developer.
+          </EducationDescription>
           <TimelineContainer>
             <Timeline>
               {experiences.map((experience, index) => (
                 <TimelineItem>
                   <TimelineSeparator>
-                    <TimelineDot color="primary" variant="outlined">
-                      <BusinessCenter />
+                    <TimelineDot color="secondary" variant="outlined">
+                      <BusinessCenter
+                        style={{ color: "white", fontSize: "30px" }}
+                      />
                     </TimelineDot>
                     {index !== experience.length - 1 && (
                       <TimelineConnector style={{ background: "gray" }} />

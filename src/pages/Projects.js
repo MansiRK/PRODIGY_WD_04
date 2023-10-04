@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/Cards/ProjectCard";
 import { projects } from "../utils/Data";
 
 const Container = styled.div`
@@ -11,6 +11,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   padding: 80px 30px;
+
   -webkit-clip-path: polygon(53% 0, 100% 4%, 100% 97%, 37% 100%, 0 98%, 0 4%);
   clip-path: polygon(53% 0, 100% 4%, 100% 97%, 37% 100%, 0 98%, 0 4%);
 
@@ -35,14 +36,12 @@ const Wrapper = styled.div`
   @media screen and (max-width: 950px) {
     flex-direction: column;
     justify-content: space-between;
-    /* order: 2; */
   }
 
   @media screen and (max-width: 950px) {
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
-    /* order: 2; */
   }
 `;
 
@@ -74,16 +73,18 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 28px; */
   flex-wrap: wrap;
 `;
+
 const Projects = ({ openModal, setOpenModal }) => {
   return (
     <div id="projects">
       <Container>
         <Wrapper>
           <Title>Projects</Title>
-          <Description>Description</Description>
+          <Description>
+            These are some of my projects which represents my work.
+          </Description>
           <CardContainer>
             {projects.map((newproject) => (
               <ProjectCard
