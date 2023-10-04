@@ -25,7 +25,7 @@ const Container = styled.div`
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
-  @media (max-width: 640) {
+  @media (max-width: 650px) {
     padding: 32px 10px;
   }
 `;
@@ -58,7 +58,7 @@ const EducationTitle = styled.h2`
     font-size: 30px;
   }
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 650px) {
     font-size: 25px;
   }
 `;
@@ -78,7 +78,7 @@ const TimelineContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (max-width: 660px) {
+  @media (max-width: 650px) {
     align-items: end;
   }
 `;
