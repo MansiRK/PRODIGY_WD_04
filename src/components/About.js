@@ -266,7 +266,7 @@ const About = () => {
             <ButtonContainer>
               <CVButton href={Bio.resume}>
                 <Description />
-                View CV
+                View Resume
               </CVButton>
             </ButtonContainer>
           </AboutTextContainer>

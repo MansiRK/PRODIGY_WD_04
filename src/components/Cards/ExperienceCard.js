@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const ExperienceCardContainer = styled.div`
   width: 700px;
-  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,8 +18,8 @@ const ExperienceCardContainer = styled.div`
   }
 
   @media screen and (max-width: 650px) {
-    width: 300px;
-    padding: 10px;
+    width: 250px;
+    padding: 0;
   }
 `;
 
@@ -116,7 +115,6 @@ const SkillContainer = styled.div`
   margin-top: 10px;
   align-items: center;
   justify-content: center;
-  display: 1px solid white;
 `;
 
 const SkillItem = styled.div`
@@ -127,7 +125,7 @@ const SkillItem = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 650px) {
-    justify-content: start;
+    justify-content: top;
     gap: 2px;
   }
 `;

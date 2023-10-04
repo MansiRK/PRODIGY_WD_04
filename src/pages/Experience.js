@@ -11,14 +11,12 @@ import { experiences } from "../utils/Data";
 import { BusinessCenter } from "@mui/icons-material";
 
 const Container = styled.div`
-  width: 100%;
-  height: 100vh;
   background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 50px 20px;
   position: relative;
   z-index: 1;
 
@@ -28,7 +26,7 @@ const Container = styled.div`
     padding: 66px 16px;
   }
   @media (max-width: 640) {
-    padding: 32px 15px;
+    padding: 32px 10px;
   }
 `;
 
@@ -46,6 +44,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 650px) {
     flex-direction: column;
     padding-left: 20px;
+    padding: 40px 0px 0px 0px;
   }
 `;
 
@@ -73,14 +72,14 @@ const EducationDescription = styled.div`
 
 const TimelineContainer = styled.div`
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   @media (max-width: 660px) {
-    align-items: center;
+    align-items: end;
   }
 `;
 

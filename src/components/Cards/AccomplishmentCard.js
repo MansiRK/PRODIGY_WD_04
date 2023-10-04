@@ -10,7 +10,7 @@ const AccomplishmentCardContainer = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
-  padding: 20px 20px;
+  padding: 20px;
 
   @media screen and (max-width: 950px) {
     width: 400px;

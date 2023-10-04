@@ -12,7 +12,8 @@ export const Bio = {
   description:
     "I'm a versatile professional with a unique skill set encompassing Full Stack Development, Web Development, and Programming. My expertise spans both front-end and back-end technologies, including HTML, CSS, JavaScript, Node.js, Express.js, Bootstrap, React.js, C, Python, and databases like MongoDB and MySQL.",
   github: "https://github.com/MansiRK",
-  resume: "https://www.linkedin.com/in/mansi-kamble/",
+  resume:
+    "https://drive.google.com/file/d/1toXyxMkPRV6J0ngsi_Z-aLTfRCxSTuaR/view?usp=sharing",
   linkedIn: "https://www.linkedin.com/in/mansi-kamble/",
   instagram: "https://www.instagram.com/__mansi.rk__/",
 };
@@ -268,7 +269,8 @@ export const projects = [
 export const accomplishment = [
   {
     id: 0,
-    image: "",
+    certificate:
+      "https://drive.google.com/file/d/167ZAYJX450PA5lBUKddFPL8dRT_3dEVm/view?usp=sharing",
     title: "Best Research Paper",
     date: "March 2023",
     rank: "3rd Prize",

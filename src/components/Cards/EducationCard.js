@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const EducationCardContainer = styled.div`
   width: 700px;
-  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +10,7 @@ const EducationCardContainer = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
-  padding: 20px 20px;
+  padding: 20px;
 
   @media screen and (max-width: 950px) {
     width: 400px;
@@ -19,8 +18,8 @@ const EducationCardContainer = styled.div`
   }
 
   @media screen and (max-width: 650px) {
-    width: 300px;
-    padding: 10px;
+    width: 250px;
+    padding: 0;
   }
 `;
 
