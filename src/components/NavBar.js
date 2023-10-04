@@ -11,7 +11,7 @@ import { AiOutlineTrophy } from "react-icons/ai";
 import { Bio } from "../utils/Data";
 
 const Nav = styled.div`
-  background-color: rgb(3, 20, 42);
+  background-color: #1c1c27;
   height: 80px;
   display: flex;
   justify-content: center;

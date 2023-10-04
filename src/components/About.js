@@ -203,7 +203,7 @@ const CVButton = styled.a`
     font-size: 20px;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 650px) {
     padding: 10px 25px;
     font-size: 15px;
   }

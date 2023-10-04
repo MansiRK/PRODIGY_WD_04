@@ -108,6 +108,43 @@ const Description = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Button = styled.a`
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px;
+  padding: 15px 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(204, 2, 204);
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  &:hover {
+    background-color: white;
+    color: rgb(204, 2, 204);
+  }
+
+  @media screen and (max-width: 950px) {
+    padding: 10px 30px;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+`;
+
 const AccomplishmentCard = ({ accomplishment }) => {
   return (
     <AccomplishmentCardContainer>
@@ -122,6 +159,9 @@ const AccomplishmentCard = ({ accomplishment }) => {
         </Body>
       </AccomplishmentDetail>
       <Description>{accomplishment.description}</Description>
+      <ButtonContainer>
+        <Button href={accomplishment.certificate}>View Certificate</Button>
+      </ButtonContainer>
     </AccomplishmentCardContainer>
   );
 };
