@@ -186,7 +186,7 @@ const CVButton = styled.a`
   svg {
     margin-right: 5px;
     font-size: 25px;
-    color: white !important;
+    color: white;
   }
 
   &:hover {
@@ -264,7 +264,7 @@ const About = () => {
             <SubTitle>{Bio.description}</SubTitle>
 
             <ButtonContainer>
-              <CVButton href={Bio.resume}>
+              <CVButton href={Bio.resume} target="display">
                 <Description />
                 View Resume
               </CVButton>

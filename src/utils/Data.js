@@ -196,7 +196,7 @@ export const projects = [
       "A sophisticated full-stack e-commerce platform empowering users to seamlessly browse, purchase, and manage products. This feature-rich website facilitates effortless navigation, intuitive cart management, and efficient order placement. Admin capabilities include comprehensive CRUD operations on products and categories, coupled with the ability to refine order statuses. Implementing strict linting standards and fortified with protected routes for both user and admin, this e-commerce solution prioritizes professionalism, security, and a seamless user experience.",
     tech: ["React Js", "Bootstrap", "Node Js", "Express Js", "MySql"],
     github: "https://github.com/MansiRK/ShopRise-Ecommerce",
-    live: "https://github.com/MansiRK/ShopRise-Ecommerce",
+    live: "",
   },
   {
     id: 1,
@@ -251,7 +251,7 @@ export const projects = [
       "Powering the backend infrastructure of a sophisticated social media web application, this system orchestrates seamless CRUD operations meticulously designed for users, posts, and comments. Exclusive access is granted to authenticated administrators, ensuring optimal control and security. Crucial components include robust registration and login functionality, prioritizing user authentication and data integrity. Upholding the highest linting standards, this professional-grade backend architecture exemplifies precision and reliability in every aspect of its operation.",
     tech: ["Node Js", "Express Js", "MongoDB"],
     github: "https://github.com/MansiRK/Social-media-app-Backend",
-    live: "https://github.com/MansiRK/Social-media-app-Backend",
+    live: "",
   },
   {
     id: 6,

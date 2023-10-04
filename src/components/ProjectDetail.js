@@ -170,7 +170,7 @@ const ProjectDetail = ({ openModal, setOpenModal }) => {
           <ProjectDescription>{project?.description}</ProjectDescription>
           <ButtonContainer>
             <Button href={project?.github}>Code</Button>
-            <Button href={project?.live}>Website</Button>
+            {project?.live && <Button href={project.live}>Website</Button>}
           </ButtonContainer>
         </Wrapper>
       </Container>
