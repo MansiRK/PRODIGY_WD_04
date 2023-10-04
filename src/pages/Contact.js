@@ -50,7 +50,7 @@ const Title = styled.div`
 `;
 
 const Description = styled.div`
-  font-size: 22px;
+  font-size: 20px;
   color: rgb(195, 190, 195);
   text-align: center;
   width: 70%;
