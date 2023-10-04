@@ -2,8 +2,6 @@ import Home from "./pages/Home";
 import styled from "styled-components";
 import NavBar from "./components/NavBar";
 import Skills from "./pages/Skills";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./utils/Theme";
 import { useState } from "react";
 import Education from "./pages/Education";
 import { BrowserRouter as Router } from "react-router-dom";
