@@ -65,9 +65,14 @@ const ContactForm = styled.form`
   margin: 30px 20px;
   padding: 30px 100px;
 
+  &:hover {
+    box-shadow: 0 5px 20px rgb(206 18 206);
+  }
+
   @media screen and (max-width: 650px) {
     width: 100%;
     padding: 20px;
+    box-shadow: 0 5px 20px rgb(206 18 206);
   }
 `;
 
