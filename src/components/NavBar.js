@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { LiaSuitcaseSolid } from "react-icons/lia";
@@ -40,7 +39,7 @@ const NavContainer = styled.div`
   }
 `;
 
-const NavBrand = styled(Link)`
+const NavBrand = styled.a`
   width: 90%;
   padding: 0 5px;
   display: flex;
@@ -209,7 +208,7 @@ const NavBar = () => {
   return (
     <Nav>
       <NavContainer>
-        <NavBrand to="/">
+        <NavBrand href="#about">
           P<LargerO>O</LargerO>rtfolio
         </NavBrand>
         <MobileMenuIcon>

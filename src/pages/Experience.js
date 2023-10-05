@@ -95,7 +95,7 @@ const Experience = () => {
           <TimelineContainer>
             <Timeline>
               {experiences.map((experience, index) => (
-                <TimelineItem>
+                <TimelineItem key={index}>
                   <TimelineSeparator>
                     <TimelineDot color="secondary" variant="outlined">
                       <BusinessCenter

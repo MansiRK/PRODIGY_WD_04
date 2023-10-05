@@ -90,7 +90,7 @@ const Accomplishment = () => {
           <TimelineContainer>
             <Timeline>
               {accomplishment.map((accomplishment, index) => (
-                <TimelineItem>
+                <TimelineItem key={index}>
                   <TimelineContent sx={{ py: "12px", px: 3 }}>
                     <AccomplishmentCard accomplishment={accomplishment} />
                   </TimelineContent>

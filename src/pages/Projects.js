@@ -86,11 +86,12 @@ const Projects = ({ openModal, setOpenModal }) => {
             These are some of my projects which represents my work.
           </Description>
           <CardContainer>
-            {projects.map((newproject) => (
+            {projects.map((project) => (
               <ProjectCard
-                project={newproject}
+                project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}
+                key={project.id}
               />
             ))}
           </CardContainer>

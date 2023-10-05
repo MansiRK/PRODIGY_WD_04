@@ -61,7 +61,7 @@ const Skills = () => {
         <Wrapper>
           <Title>Skills</Title>
           <Description>
-            These are some of the skills in which I'm proficient.
+            This are some the skills in which I'm proficient.
           </Description>
           <SkillCard />
         </Wrapper>
