@@ -47,7 +47,6 @@ const NavItems = styled.div`
   align-items: center;
   padding-bottom: 20px;
   border-bottom: 0.2px solid gray;
-  /* border: 1px solid white; */
 `;
 
 const NavLink = styled.a`
