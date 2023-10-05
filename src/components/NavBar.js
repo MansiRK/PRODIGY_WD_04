@@ -11,7 +11,7 @@ import { Bio } from "../utils/Data";
 
 const Nav = styled.div`
   background-color: #1c1c27;
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ const NavContainer = styled.div`
   }
 
   @media screen and (max-width: 1100px) {
-    padding: 5px 0;
+    padding: 0;
   }
 `;
 
@@ -59,11 +59,11 @@ const NavBrand = styled.a`
   }
 
   @media screen and (max-width: 1250px) {
-    padding: 10px;
+    padding: 0 10px;
   }
 
   @media screen and (max-width: 1050px) {
-    margin: 5px;
+    margin: 0 5px;
   }
 
   @media screen and (max-width: 650px) {
@@ -166,7 +166,7 @@ const MobileMenuIcon = styled.div`
     top: 0;
     right: 0;
     font-size: 30px;
-    margin: 15px 50px 0 2px;
+    margin: 10px 50px 5px 2px;
     cursor: pointer;
   }
 `;

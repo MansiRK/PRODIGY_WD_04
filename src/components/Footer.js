@@ -19,11 +19,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 30px 20px;
-  @media (max-width: 960px) {
+  @media (max-width: 950px) {
     padding: 22px 16px;
   }
-  @media (max-width: 640) {
-    padding: 18px 5px;
+  @media (max-width: 650) {
+    padding: 10px 5px;
   }
   z-index: 1;
 `;
@@ -79,7 +79,7 @@ const NavLink = styled.a`
 
 const IconsContainer = styled.div`
   display: flex;
-  margin: 10px;
+  margin: 2px 10px;
 `;
 
 const Icons = styled.a`

@@ -14,6 +14,7 @@ const ProjectCardContainer = styled.div`
   cursor: pointer;
   background-color: black;
   transition: all 0.5s ease-in-out;
+  border-radius: 20px;
 
   &:hover {
     transform: translateY(-10px);

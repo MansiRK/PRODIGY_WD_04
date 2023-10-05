@@ -74,7 +74,7 @@ const SkillItem = styled.div`
     font-size: 15px;
     font-weight: 450;
     padding: 2px 10px;
-    margin: 10px;
+    margin: 2px 10px;
 
     height: 35px;
   }
