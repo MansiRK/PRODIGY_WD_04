@@ -24,6 +24,7 @@ const ProjectCardContainer = styled.div`
 
   @media screen and (max-width: 650px) {
     max-width: 500px;
+    height: 450px;
     padding: 10px 15px;
     margin: 20px 10px;
     box-shadow: 2px 5px 20px #565356;
