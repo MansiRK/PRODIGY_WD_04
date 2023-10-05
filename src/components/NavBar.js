@@ -33,17 +33,21 @@ const NavContainer = styled.div`
   width: 80%;
   padding: 5px 20px;
 
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    padding: 5px 2px;
+  }
+
   @media screen and (max-width: 1100px) {
-    width: 80%;
-    padding: 5px 10px;
+    padding: 5px 0;
   }
 `;
 
 const NavBrand = styled.a`
-  width: 90%;
+  width: 20%;
   padding: 0 5px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   font-size: 35px;
   font-weight: 800;
@@ -54,8 +58,18 @@ const NavBrand = styled.a`
     color: rgb(204, 2, 204);
   }
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 1250px) {
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 1050px) {
+    margin: 5px;
+  }
+
+  @media screen and (max-width: 650px) {
     font-size: 25px;
+    width: 20%;
+    padding-left: 100px;
   }
 `;
 
@@ -63,7 +77,7 @@ const LargerO = styled.span`
   font-size: 40px;
   color: aqua;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 650px) {
     font-size: 30px;
   }
 `;
@@ -74,6 +88,9 @@ const NavItems = styled.ul`
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+  }
   @media screen and (max-width: 950px) {
     display: none;
   }
@@ -91,14 +108,22 @@ const NavLink = styled.a`
     color: aqua;
     border-bottom: 3px solid aqua;
   }
+
+  @media screen and (max-width: 1100px) {
+    margin: 0 5px;
+  }
 `;
 
 const ButtonContainer = styled.div`
-  height: 100%;
-  width: 100%;
+  width: 20%;
+
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 const Button = styled.a`
@@ -113,12 +138,17 @@ const Button = styled.a`
   border-radius: 50px;
   border: 2px solid aqua;
   text-decoration: none;
+
   &:hover {
     background-color: aqua;
     color: white;
   }
   svg {
     margin-right: 5px;
+  }
+
+  @media screen and (max-width: 1050px) {
+    margin: 5px;
   }
 
   @media screen and (max-width: 950px) {
@@ -131,7 +161,6 @@ const MobileMenuIcon = styled.div`
 
   @media screen and (max-width: 950px) {
     color: white;
-    /* padding-left: 20px; */
     display: block;
     position: absolute;
     top: 0;
@@ -139,9 +168,6 @@ const MobileMenuIcon = styled.div`
     font-size: 30px;
     margin: 15px 50px 0 2px;
     cursor: pointer;
-
-    /* svg {
-    } */
   }
 `;
 
@@ -156,7 +182,6 @@ const MobileMenu = styled.div`
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   top: 80px;
   right: 0;
-  /* padding: 10px 0; */
   background-color: #1c1c27;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};

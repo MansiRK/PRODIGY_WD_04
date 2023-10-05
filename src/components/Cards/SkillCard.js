@@ -11,7 +11,8 @@ const SkillContainer = styled.div`
 
   @media screen and (max-width: 650px) {
     max-width: 500px;
-    width: 100%;
+    padding: 10px 15px;
+    margin: 20px 10px;
   }
 `;
 
@@ -24,13 +25,9 @@ const Skill = styled.div`
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border: 0.5px solid aqua;
   padding: 15px 25px;
-  /* width: 300px; */
 
   @media screen and (max-width: 650px) {
-    /* max-width: 500px; */
-    width: 300px;
-
-    padding: 10px 5px;
+    padding: 20px 5px;
   }
 `;
 

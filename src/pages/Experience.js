@@ -48,7 +48,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const EducationTitle = styled.h2`
+const ExperienceTitle = styled.h2`
   font-size: 40px;
   font-weight: 600;
   color: white;
@@ -63,7 +63,7 @@ const EducationTitle = styled.h2`
   }
 `;
 
-const EducationDescription = styled.div`
+const ExperienceDescription = styled.div`
   font-size: 20px;
   color: rgb(195, 190, 195);
   text-align: center;
@@ -78,8 +78,9 @@ const TimelineContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @media (max-width: 650px) {
-    align-items: end;
+    align-items: center;
   }
 `;
 
@@ -88,10 +89,10 @@ const Experience = () => {
     <div id="experience">
       <Container>
         <Wrapper>
-          <EducationTitle>Experience</EducationTitle>
-          <EducationDescription>
+          <ExperienceTitle>Experience</ExperienceTitle>
+          <ExperienceDescription>
             My work experience as a web developer.
-          </EducationDescription>
+          </ExperienceDescription>
           <TimelineContainer>
             <Timeline>
               {experiences.map((experience, index) => (
