@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../utils/Data";
@@ -55,7 +55,7 @@ const AboutImgContainer = styled.div`
   align-items: center;
   overflow: hidden;
   padding: 10px 50px;
-
+  pointer-events: none;
   @media screen and (max-width: 950px) {
     order: 1;
     height: 50%;
@@ -218,6 +218,13 @@ const Image = styled.img`
   border-radius: 50%;
   border: 2px solid aqua;
   animation: glowing 3s infinite;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   @keyframes glowing {
     0% {
@@ -245,6 +252,17 @@ const Image = styled.img`
 `;
 
 const About = () => {
+  useEffect(() => {
+    const disableRightClick = (event) => {
+      event.preventDefault();
+    };
+
+    document.addEventListener("contextmenu", disableRightClick);
+
+    return () => {
+      document.removeEventListener("contextmenu", disableRightClick);
+    };
+  }, []);
   return (
     <div id="about">
       <AboutContainer>

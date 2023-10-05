@@ -180,7 +180,7 @@ const MobileMenu = styled.div`
   width: 100%;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  top: 80px;
+  top: 70px;
   right: 0;
   background-color: #1c1c27;
   transform: ${({ isOpen }) =>
