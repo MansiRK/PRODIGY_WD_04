@@ -80,7 +80,7 @@ const TimelineContainer = styled.div`
   justify-content: center;
 
   @media (max-width: 650px) {
-    align-items: center;
+    align-items: start;
   }
 `;
 

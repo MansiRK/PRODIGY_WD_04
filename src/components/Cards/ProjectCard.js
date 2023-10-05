@@ -17,7 +17,7 @@ const ProjectCardContainer = styled.div`
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 5px 20px rgb(206 158 206);
+    box-shadow: 2px 5px 20px #565356;
 
     filter: brightness(1);
   }
@@ -26,7 +26,7 @@ const ProjectCardContainer = styled.div`
     max-width: 500px;
     padding: 10px 15px;
     margin: 20px 10px;
-    box-shadow: 0 5px 20px rgb(206 158 206);
+    box-shadow: 2px 5px 20px #565356;
   }
 `;
 
