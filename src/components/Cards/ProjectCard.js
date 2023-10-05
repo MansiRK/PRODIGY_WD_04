@@ -17,14 +17,16 @@ const ProjectCardContainer = styled.div`
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 20px rgb(206 158 206);
+
     filter: brightness(1);
   }
 
   @media screen and (max-width: 650px) {
     max-width: 500px;
     padding: 10px 15px;
-    margin: 10px;
+    margin: 20px 10px;
+    box-shadow: 0 5px 20px rgb(206 158 206);
   }
 `;
 
@@ -110,6 +112,19 @@ const ProjectDescription = styled.div`
   }
 `;
 
+const DetailText = styled.h4`
+  text-align: center;
+  font-size: 9px;
+  font-weight: 300;
+  color: aqua;
+  margin-top: 30px;
+  display: none;
+
+  @media screen and (max-width: 650px) {
+    display: block;
+  }
+`;
+
 const Date = styled.div`
   font-size: 15px;
   font-weight: 400;
@@ -136,7 +151,7 @@ const ProjectCard = ({ project, setOpenModal }) => {
         <Date>{project.date}</Date>
         <ProjectDescription>{project.description}</ProjectDescription>
       </ProjectDetails>
-      {/* <ProjectDetail /> */}
+      <DetailText>Click for project details</DetailText>
     </ProjectCardContainer>
   );
 };
