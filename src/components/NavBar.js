@@ -158,7 +158,7 @@ const MobileMenu = styled.div`
   top: 80px;
   right: 0;
   /* padding: 10px 0; */
-  background-color: rgb(3, 20, 42);
+  background-color: #1c1c27;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
   opacity: ${({ isOpen }) => (isOpen ? "80%" : "0")};

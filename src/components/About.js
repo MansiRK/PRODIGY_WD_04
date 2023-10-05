@@ -7,7 +7,7 @@ import Description from "@mui/icons-material/DescriptionOutlined";
 const AboutContainer = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgb(4, 25, 34);
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
