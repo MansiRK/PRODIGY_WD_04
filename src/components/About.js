@@ -17,9 +17,12 @@ const AboutContainer = styled.div`
   position: relative;
   padding: 150px 30px;
 
+  @media (max-width: 1024px) {
+    height: 100%;
+  }
+
   @media (max-width: 960px) {
     padding: 66px 16px;
-    height: 100%;
   }
   @media (max-width: 640) {
     padding: 32px 16px;
@@ -58,6 +61,10 @@ const AboutImgContainer = styled.div`
   overflow: hidden;
   padding: 10px 50px;
   pointer-events: none;
+
+  @media screen and (max-width: 1024px) {
+    height: 100%;
+  }
   @media screen and (max-width: 950px) {
     order: 1;
     height: 50%;
@@ -67,7 +74,6 @@ const AboutImgContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
   }
 `;
 
