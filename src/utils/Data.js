@@ -14,7 +14,7 @@ export const Bio = {
     "I'm a versatile professional with a unique skill set encompassing Full Stack Development, Web Development, and Programming. My expertise spans both front-end and back-end technologies, including HTML, CSS, JavaScript, Node.js, Express.js, Bootstrap, React.js, C, Python, and databases like MongoDB and MySQL.",
   github: "https://github.com/MansiRK",
   resume:
-    "https://drive.google.com/file/d/1n7gxSoIee1nsDOUiJtUbxCbDTtaSDOpW/view?usp=drive_link",
+    "https://drive.google.com/file/d/1n7gxSoIee1nsDOUiJtUbxCbDTtaSDOpW/view?usp=sharing",
   linkedIn: "https://www.linkedin.com/in/mansi-kamble/",
   instagram: "https://www.instagram.com/__mansi.rk__/",
 };
