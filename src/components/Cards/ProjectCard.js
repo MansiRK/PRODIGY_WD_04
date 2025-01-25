@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ProjectCardContainer = styled.div`
   width: 500px;
-  height: 600px;
+  height: 550px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -13,8 +13,9 @@ const ProjectCardContainer = styled.div`
   margin: 30px 40px;
   cursor: pointer;
   background-color: black;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease;
   border-radius: 20px;
+  border: 0.4px solid lightgray;
 
   &:hover {
     transform: translateY(-10px);
@@ -37,6 +38,7 @@ const ProjectImage = styled.img`
   height: 250px;
   border-radius: 20px;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
 `;
 
 const TagsContainer = styled.div`

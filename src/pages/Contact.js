@@ -64,6 +64,7 @@ const ContactForm = styled.form`
   border-radius: 20px;
   margin: 30px 20px;
   padding: 30px 100px;
+  transition: all 0.8s ease;
 
   &:hover {
     box-shadow: 2px 5px 20px #040004;
@@ -89,11 +90,11 @@ const ContactInput = styled.input`
   font-size: 18px;
   margin-bottom: 20px;
   color: white;
-  border: 1px solid white;
+  border: 1px solid gray;
   border-radius: 50px;
   background-color: transparent;
   padding: 10px 20px;
-
+  transition: all 0.8s ease;
   &:hover {
     border: 1px solid rgb(106, 30, 116);
   }
@@ -107,11 +108,11 @@ const TextMessage = styled.textarea`
   font-size: 18px;
   margin-bottom: 20px;
   color: white;
-  border: 1px solid white;
   border-radius: 50px;
   background-color: transparent;
   padding: 10px 20px;
-
+  border: 1px solid gray;
+  transition: all 0.8s ease;
   &:hover {
     border: 1px solid rgb(106, 30, 116);
   }
@@ -142,6 +143,7 @@ const Button = styled.button`
   background-color: aqua;
   border-radius: 50px;
   border: none;
+  transition: all 0.8s ease;
 
   &:hover {
     background-color: white;

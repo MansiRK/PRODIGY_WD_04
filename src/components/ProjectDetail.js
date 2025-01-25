@@ -32,11 +32,12 @@ const Wrapper = styled.div`
 
 const CloseButton = styled.div`
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: -5%;
+  right: -5%;
   cursor: pointer;
   color: white;
   font-size: 25px;
+  font-weight: 700;
 `;
 
 const ProjectImage = styled.img`
@@ -77,6 +78,7 @@ const ProjectTitle = styled.h2`
   font-weight: 700;
   color: aqua;
   text-align: center;
+  padding-top: 20px;
 
   @media screen and (max-width: 950px) {
     font-size: 23px;
@@ -131,7 +133,8 @@ const Button = styled.a`
   background-color: aqua;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
+  border: 1px solid transparent;
   &:hover {
     border: 1px solid rgb(204, 2, 204);
     background-color: transparent;

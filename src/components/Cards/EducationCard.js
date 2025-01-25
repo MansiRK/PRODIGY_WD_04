@@ -33,7 +33,8 @@ const EducationDetail = styled.div`
 
 const Image = styled.img`
   width: 70px;
-  height: 50px;
+  height: 70px;
+  object-fit: contain;
   margin: 10px 30px;
   background-color: white;
   border-radius: 20px;

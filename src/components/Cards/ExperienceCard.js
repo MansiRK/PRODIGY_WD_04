@@ -33,7 +33,8 @@ const ExperienceDetail = styled.div`
 
 const Image = styled.img`
   width: 70px;
-  height: 50px;
+  height: 70px;
+  object-fit: contain;
   margin: 10px 30px;
   background-color: white;
   border-radius: 20px;
@@ -149,7 +150,7 @@ const ExperienceCard = ({ experience }) => {
   return (
     <ExperienceCardContainer>
       <ExperienceDetail>
-        <Image src={experience.image} />
+        <Image src={experience.image} alt="experience" />
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>

@@ -4,9 +4,10 @@ import Typewriter from "typewriter-effect";
 import { Bio } from "../utils/Data";
 import AboutImage from "../images/bgimage.png";
 import Description from "@mui/icons-material/DescriptionOutlined";
+
 const AboutContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 90vh;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -49,7 +50,7 @@ const AboutInnerContainer = styled.div`
 
 const AboutImgContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +97,7 @@ const AboutTextContainer = styled.div`
 
 const Title = styled.div`
   font-size: 38px;
+  line-height: 48px;
   font-weight: 800;
   letter-spacing: 0.5px;
   color: white;
@@ -124,6 +126,7 @@ const Span = styled.span`
 
 const TextLoop = styled.div`
   font-size: 30px;
+  line-height: 40px;
   font-weight: 750;
   display: flex;
   align-items: center;
@@ -145,6 +148,7 @@ const TextLoop = styled.div`
 
 const SubTitle = styled.div`
   font-size: 20px;
+  line-height: 30px;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -170,7 +174,8 @@ const ButtonContainer = styled.div`
 `;
 
 const CVButton = styled.a`
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: 700;
   margin: 20px;
   padding: 15px 30px;
@@ -182,7 +187,7 @@ const CVButton = styled.a`
   border-radius: 50px;
   border: none;
   text-decoration: none;
-
+  transition: color 0.8s ease, background-color 0.8s ease;
   svg {
     margin-right: 5px;
     font-size: 25px;
@@ -211,13 +216,13 @@ const CVButton = styled.a`
 
 const Image = styled.img`
   position: relative;
-  width: 60%;
+  width: 65%;
   height: 60%;
   max-width: 100%;
   max-height: 100%;
   border-radius: 50%;
   border: 2px solid aqua;
-  animation: glowing 3s infinite;
+  animation: glowing 4s infinite;
   -webkit-user-drag: none;
   user-drag: none;
   -khtml-user-drag: none;

@@ -53,7 +53,7 @@ const NavBrand = styled.a`
   font-weight: 800;
   color: white;
   text-decoration: none;
-
+  transition: color 0.8s ease;
   &:hover {
     color: rgb(204, 2, 204);
   }
@@ -104,6 +104,8 @@ const NavLink = styled.a`
   text-decoration: none;
   margin: 0 15px;
   padding: 0 20px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.8s ease, border-bottom 0.8s ease;
   &:hover {
     color: aqua;
     border-bottom: 3px solid aqua;
@@ -138,6 +140,7 @@ const Button = styled.a`
   border-radius: 50px;
   border: 2px solid aqua;
   text-decoration: none;
+  transition: color 0.8s ease, background-color 0.8s ease;
 
   &:hover {
     background-color: aqua;
@@ -197,7 +200,7 @@ const MobileMenuItem = styled.a`
   text-decoration: none;
   padding: 5px 25px;
   border-bottom: 0.2px solid gray;
-
+  transition: color 0.8s ease;
   &:hover {
     color: aqua;
   }
@@ -217,6 +220,7 @@ const MobileGitHubButton = styled.a`
     border-radius: 50px;
     text-decoration: none;
     border: 2px solid aqua;
+    transition: color 0.8s ease, background-color 0.8s ease;
     &:hover {
       background-color: aqua;
       color: white;

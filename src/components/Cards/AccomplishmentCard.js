@@ -129,6 +129,7 @@ const Button = styled.a`
   border-radius: 50px;
   border: none;
   text-decoration: none;
+  transition: all 0.8s ease;
   &:hover {
     background-color: white;
     color: rgb(204, 2, 204);

@@ -5,6 +5,7 @@ import Userdata from "../images/userdata.png";
 import Todo from "../images/todo.png";
 import Sma from "../images/sma.png";
 import Shoprise from "../images/shoprise.png";
+import AresStudio from "../images/ares.png";
 
 export const Bio = {
   name: "Mansi Kamble",
@@ -166,14 +167,35 @@ export const education = [
 
 export const experiences = [
   {
-    id: 0,
+    id: 1,
+    image:
+      "data:image/jpeg;base64,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",
+    role: "MERN Developer",
+    company: "Five Online Web Solutions Pvt. Ltd.",
+    time: "April 2024 - Current",
+    description:
+      "Developed RESTful APIs for a MERN project, enabling efficient frontend-backend communication. Built and optimized frontend interfaces using React.js, HTML, CSS, JS, and Bootstrap. Improved performance and user experience through seamless integration with the backend.",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "React Js",
+      "Express Js",
+      "Node Js",
+      "MongoDB",
+    ],
+    document: "",
+  },
+  {
+    id: 1,
     image:
       "data:image/jpeg;base64,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",
     role: "Web Developer Intern",
     company: "Prodigy InfoTech",
     time: "September 2023 - October 2023",
     description:
-      "Developed responsive and user-friendly websites using HTML, CSS, and JavaScript.Expanded my knowledge of web development by learning about emerging technologies and best practices.",
+      "Developed responsive and user-friendly websites using HTML, CSS, and JavaScript. Expanded my knowledge of web development by learning about emerging technologies and best practices.",
     skills: [
       "HTML",
       "CSS",
@@ -189,6 +211,17 @@ export const experiences = [
 export const projects = [
   {
     id: 0,
+    image: AresStudio,
+    name: "ARES Studio",
+    date: "April-2024 - December 2024",
+    description:
+      "A full-stack MERN application featuring two primary services: GAMES and VFX. The content is managed through an admin panel, with videos hosted on Cloudinary and ImageKit platforms. Projects are categorized as public and private, with private projects secured by password protection. Passwords for private projects will be shared via email in the future.",
+    tech: ["React Js", "Bootstrap", "Node Js", "Express Js", "MySql"],
+    github: "https://github.com/MansiRK/ShopRise-Ecommerce",
+    live: "https://aresstudio.in",
+  },
+  {
+    id: 1,
     image: Shoprise,
     name: "ShopRise",
     date: "August 2023 - September 2023",
@@ -199,7 +232,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 1,
+    id: 2,
     image: Tictactoe,
     name: "TicTacToe",
     date: "September 2023",
@@ -210,7 +243,7 @@ export const projects = [
     live: "https://mansirk.github.io/PRODIGY_WD_03/",
   },
   {
-    id: 2,
+    id: 3,
     image: Userdata,
     name: "User Data Management Application",
     date: "September 2023",
@@ -221,7 +254,7 @@ export const projects = [
     live: "https://user-data-management-app.web.app/",
   },
   {
-    id: 3,
+    id: 4,
     image: Timetracker,
     name: "TimeTracker",
     date: "September 2023",
@@ -232,7 +265,7 @@ export const projects = [
     live: "https://mansirk.github.io/PRODIGY_WD_02/",
   },
   {
-    id: 4,
+    id: 5,
     image: TravelBuddy,
     name: "TravelBuddy",
     date: "September 2023",
@@ -243,7 +276,7 @@ export const projects = [
     live: "https://mansirk.github.io/PRODIGY_WD_01/",
   },
   {
-    id: 5,
+    id: 6,
     image: Sma,
     name: "Social Media App Backend",
     date: "July 2023 - August 2023",
@@ -254,7 +287,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 6,
+    id: 7,
     image: Todo,
     name: "TodoList",
     date: "June 2023 - July 2023",

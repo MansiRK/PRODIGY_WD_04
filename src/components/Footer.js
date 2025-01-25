@@ -57,6 +57,8 @@ const NavLink = styled.a`
   text-decoration: none;
   margin: 0 15px;
   padding: 0 20px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.8s ease, border-bottom 0.8s ease;
 
   &:hover {
     color: aqua;
@@ -70,7 +72,7 @@ const NavLink = styled.a`
     cursor: pointer;
     text-decoration: none;
     padding: 0;
-
+    transition: color 0.8s ease;
     &:hover {
       color: aqua;
     }
@@ -88,6 +90,7 @@ const Icons = styled.a`
   padding: 5px 10px;
   margin: 0 20px;
   border-bottom: 0.5px solid gray;
+  transition: color 0.8s ease;
   &:hover {
     color: rgb(204, 2, 204);
   }
